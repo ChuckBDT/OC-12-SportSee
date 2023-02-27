@@ -11,7 +11,7 @@ const id12 = id.data.keyData;
 function Home() {
   return (
     <div className="w-full pl-28 flex ">
-      <div className="grid-container bg-slate-700 w-2/3 grid grid-cols-3 grid-rows-2">
+      <div className="grid-container bg-slate-200 w-2/3 grid grid-cols-3 grid-rows-2">
         <ActivityChart data={activity12} />
         <div className="duree h-64"></div>
         <div className="hexagone h-64"></div>

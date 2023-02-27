@@ -4,7 +4,11 @@ function SideStats({ data }) {
   // Tailwind Gray Color (#FBFBFB)
   // Tailwind Red Fire color (#FF0000)
   // and all other colors
-  console.log(data);
+
+  const calorieNormalized = (data.calorieCount / 1000)
+    .toFixed(3)
+    .replace(/\./g, ",");
+
   return (
     <div className="flex flex-col justify-between items-center  w-1/3 ">
       <div className="h-32 w-64 bg-gray-50 flex justify-center items-center rounded">
@@ -23,7 +27,7 @@ function SideStats({ data }) {
           </svg>
         </div>
         <div className="text-xl font-bold text-neutral-900 flex flex-col justify-center items-start w-2/4 pl-8">
-          {data.calorieCount / 1000}kCal <br />
+          {calorieNormalized}kCal <br />
           <span className="text-sm font-medium text-neutral-500">Calories</span>
         </div>
       </div>
