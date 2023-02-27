@@ -1,20 +1,23 @@
 import React from "react";
+import ActivityChart from "../recharts/ActivityChart";
+import SideStats from "../components/SideStats";
+
+import id from "../data/12-id.json";
+import activity from "../data/12-activity.json";
+
+const activity12 = activity.data.sessions;
+const id12 = id.data.keyData;
 
 function Home() {
   return (
     <div className="w-full pl-28 flex ">
       <div className="grid-container bg-slate-700 w-2/3 grid grid-cols-3 grid-rows-2">
-        {/* <ActivityChart /> */}
+        <ActivityChart data={activity12} />
         <div className="duree h-64"></div>
         <div className="hexagone h-64"></div>
         <div className="circleee h-64"></div>
       </div>
-      <div className="flex flex-col justify-between bg-orange-600 w-1/3 h-full">
-        <div className="">Calories</div>
-        <div className="">Proteines</div>
-        <div className="">Glucides</div>
-        <div className="">Lipides</div>
-      </div>
+      <SideStats data={id12} />
     </div>
   );
 }
