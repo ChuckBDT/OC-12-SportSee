@@ -3,6 +3,7 @@ import ActivityChart from "../recharts/ActivityChart";
 import PerfRadar from "../recharts/PerfRadar";
 import SideStats from "../components/SideStats";
 import ScoreRadial from "../recharts/ScoreRadial";
+import SessionsLineChart from "../recharts/SessionsLineChart";
 
 import id from "../data/12-id.json";
 import activity from "../data/12-activity.json";
@@ -15,11 +16,10 @@ const performance12 = performance;
 function Home() {
   return (
     <div className="w-full pl-28 flex ">
-      <div className="grid-container bg-slate-200 w-2/3 grid grid-cols-3 grid-rows-2">
+      <div className="grid-container w-2/3 grid grid-cols-3 grid-rows-2 justify-between items-center">
         <ActivityChart data={activity12} />
-        <div className="duree h-64"></div>
+        <SessionsLineChart />
         <PerfRadar data={performance12} />
-
         <ScoreRadial />
       </div>
       <SideStats data={id12} />

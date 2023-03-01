@@ -10,3 +10,7 @@
     fill: white;
     r:75;
 }
+
+.bg-red-project {
+    background-color: #FF0000;
+}
