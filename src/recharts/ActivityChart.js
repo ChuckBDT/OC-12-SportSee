@@ -12,7 +12,7 @@ import {
 
 export default function ActivityChart({ data }) {
   return (
-    <div className="activity col-span-3 h-80 bg-white">
+    <div className="col-span-3 h-80 bg-white">
       <BarChart
         width={600}
         height={320}
@@ -33,7 +33,7 @@ export default function ActivityChart({ data }) {
           dataKey="kilogram"
           barSize={7}
           radius={[5, 5, 0, 0]}
-          fill="#000000"
+          fill="#282D30"
         />
         <Bar
           dataKey="calories"
