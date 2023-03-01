@@ -2,6 +2,7 @@ import React from "react";
 import ActivityChart from "../recharts/ActivityChart";
 import PerfRadar from "../recharts/PerfRadar";
 import SideStats from "../components/SideStats";
+import ScoreRadial from "../recharts/ScoreRadial";
 
 import id from "../data/12-id.json";
 import activity from "../data/12-activity.json";
@@ -19,7 +20,7 @@ function Home() {
         <div className="duree h-64"></div>
         <PerfRadar data={performance12} />
 
-        <div className="circleee h-64"></div>
+        <ScoreRadial />
       </div>
       <SideStats data={id12} />
     </div>

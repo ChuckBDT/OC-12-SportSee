@@ -3,3 +3,8 @@
 * {
     font-family: 'Roboto', sans-serif;
 }
+
+.recharts-polar-angle-axis circle {
+    fill: white;
+    r:75;
+}
