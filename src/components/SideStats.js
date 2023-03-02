@@ -10,8 +10,8 @@ function SideStats({ data }) {
     .replace(/\./g, ",");
 
   return (
-    <div className="flex flex-col justify-between items-center  w-1/3 ">
-      <div className="h-32 w-64 bg-gray-50 flex justify-center items-center rounded">
+    <div className="flex flex-col justify-between items-center  w-1/4 ">
+      <div className="h-32 w-full bg-gray-50 flex justify-center items-center rounded ">
         <div className="h-16 w-16 bg-red-100 rounded-md flex justify-center items-center">
           <svg
             width="17"
@@ -31,7 +31,7 @@ function SideStats({ data }) {
           <span className="text-sm font-medium text-neutral-500">Calories</span>
         </div>
       </div>
-      <div className="h-32 w-64 bg-gray-50 flex justify-center items-center">
+      <div className="h-32 w-full bg-gray-50 flex justify-center items-center rounded">
         <div className="h-16 w-16 bg-sky-100 rounded-md flex justify-center items-center">
           <svg
             width="19"
@@ -53,7 +53,7 @@ function SideStats({ data }) {
           </span>
         </div>
       </div>
-      <div className="h-32 w-64 bg-gray-50 flex justify-center items-center">
+      <div className="h-32 w-full bg-gray-50 flex justify-center items-center rounded">
         <div className="h-16 w-16 bg-amber-100 rounded-md flex justify-center items-center">
           <svg
             width="18"
@@ -81,7 +81,7 @@ function SideStats({ data }) {
           <span className="text-sm font-medium text-neutral-500">Glucides</span>
         </div>
       </div>
-      <div className="h-32 w-64 bg-gray-50 flex justify-center items-center">
+      <div className="h-32 w-full bg-gray-50 flex justify-center items-center rounded">
         <div className="h-16 w-16 bg-pink-100 rounded-md flex justify-center items-center">
           <svg
             width="20"

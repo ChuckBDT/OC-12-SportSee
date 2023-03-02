@@ -15,8 +15,8 @@ const performance12 = performance;
 
 function Home() {
   return (
-    <div className="w-full pl-28 flex ">
-      <div className="grid-container w-2/3 grid grid-cols-3 grid-rows-2 justify-between items-center">
+    <div className="w-full pl-56 pr-28 flex gap-x-8 ">
+      <div className="grid-container w-3/4 grid grid-cols-3 grid-rows-2 items-end">
         <ActivityChart data={activity12} />
         <SessionsLineChart />
         <PerfRadar data={performance12} />

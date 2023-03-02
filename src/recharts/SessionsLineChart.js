@@ -13,43 +13,55 @@ const data = [
   { sessionLength: 75 },
 ];
 
+export const CustomTooltip = ({ active, payload }) => {
+  // Thanks to https://stackoverflow.com/a/72964329
+  if (active && payload && payload.length) {
+    return (
+      <div className="h-8 w-14 bg-white flex justify-center items-center">
+        <p className="text-black font-medium text-xs">{`${payload[0].value} min`}</p>
+      </div>
+    );
+  }
+
+  return null;
+};
+
 function SessionsLineChart() {
   return (
-    <div className="h-64 w-64 rounded-md bg-red-project">
-      <LineChart
-        width={260}
-        height={260}
-        data={data}
-        margin={{
-          bottom: 15,
-        }}
-      >
-        <text y={40} x={25} fill="rgb(255 255 255 / .5">
-          Durée moyenne
-        </text>
-        <text y={65} x={25} fill="rgb(255 255 255 / .5">
-          des sessions
-        </text>
+    <LineChart
+      className="rounded-md bg-red-project"
+      width={260}
+      height={260}
+      data={data}
+      margin={{
+        bottom: 15,
+      }}
+    >
+      <text y={40} x={25} fill="rgb(255 255 255 / .5)">
+        Durée moyenne
+      </text>
+      <text y={65} x={25} fill="rgb(255 255 255 / .5)">
+        des sessions
+      </text>
 
-        <XAxis
-          dataKey="day"
-          tick={{ fill: "rgb(255 255 255 / .5" }}
-          axisLine={false}
-          tickLine={false}
-        />
+      <XAxis
+        dataKey="day"
+        tick={{ fill: "rgb(255 255 255 / .5" }}
+        axisLine={false}
+        tickLine={false}
+      />
 
-        <Tooltip />
+      <Tooltip content={<CustomTooltip />} cursor={{ fill: "transparent" }} />
 
-        <Line
-          type="basis"
-          dataKey="sessionLength"
-          stroke="rgb(255 255 255 / .5"
-          strokeWidth="0.15rem"
-          dot={false}
-          activeDot={{ r: 3, fill: "white" }}
-        />
-      </LineChart>
-    </div>
+      <Line
+        type="basis"
+        dataKey="sessionLength"
+        stroke="rgb(255 255 255 / .5"
+        strokeWidth="0.15rem"
+        dot={false}
+        activeDot={{ r: 3, fill: "white" }}
+      />
+    </LineChart>
   );
 }
 
