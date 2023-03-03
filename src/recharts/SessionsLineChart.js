@@ -13,9 +13,12 @@ const data = [
   { sessionLength: 75 },
 ];
 
-export const CustomTooltip = ({ active, payload }) => {
+const CustomTooltip = ({ active, payload, label }) => {
   // Thanks to https://stackoverflow.com/a/72964329
-  if (active && payload && payload.length) {
+  // Customized to show Tooltip only if a label is provided
+  // As the first and last object of the array contain fake data to display the line
+  // on the edges of the chart, the tooltip won't show the fake data
+  if (active && payload && payload.length && label) {
     return (
       <div className="h-8 w-14 bg-white flex justify-center items-center">
         <p className="text-black font-medium text-xs">{`${payload[0].value} min`}</p>

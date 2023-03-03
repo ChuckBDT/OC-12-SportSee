@@ -10,6 +10,20 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
+const CustomTooltip = ({ active, payload }) => {
+  // Thanks to https://stackoverflow.com/a/72964329
+  if (active && payload && payload.length) {
+    return (
+      <div className="h-20 w-14 bg-red-600 text-white flex flex-col justify-around items-center">
+        <p className="font-medium text-xs">{`${payload[0].value} kg`}</p>
+        <p className="font-medium text-xs">{`${payload[1].value}Kcal`}</p>
+      </div>
+    );
+  }
+
+  return null;
+};
+
 export default function ActivityChart({ data }) {
   return (
     <div className="col-span-3 h-80 bg-gray-50 rounded-md">
@@ -46,7 +60,10 @@ export default function ActivityChart({ data }) {
             domain={["dataMin -10", "dataMax"]}
             hide={true}
           />
-          <Tooltip />
+          <Tooltip
+            content={<CustomTooltip />}
+            cursor={{ fill: "transparent" }}
+          />
           <Legend verticalAlign="top" align="right" />
           <Bar
             yAxisId="right"
