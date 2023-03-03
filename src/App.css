@@ -14,3 +14,22 @@
 .bg-red-project {
     background-color: #FF0000;
 }
+
+
+.weight-circle::after, .calorie-circle::after {
+    content: "";
+    display: block;
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+    position: absolute;
+    left: 0;
+}
+.weight-circle::after{
+    background-color: #282D30;
+
+}
+
+.calorie-circle::after {
+    background-color: #FF0000;
+}
