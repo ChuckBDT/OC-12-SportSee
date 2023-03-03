@@ -15,7 +15,6 @@
     background-color: #FF0000;
 }
 
-
 .weight-circle::after, .calorie-circle::after {
     content: "";
     display: block;
