@@ -4,7 +4,7 @@ import PerfRadar from "../recharts/PerfRadar";
 import SideStats from "../components/SideStats";
 import ScoreRadial from "../recharts/ScoreRadial";
 import SessionsLineChart from "../recharts/SessionsLineChart";
-import fetchUsersData from "../service/service";
+import shapeData from "../service/shape";
 
 import id from "../data/12-id.json";
 import activity from "../data/12-activity.json";
@@ -15,7 +15,7 @@ const name = id.data.userInfos.firstName;
 const activity12 = activity.data.sessions;
 const performance12 = performance;
 
-console.log(fetchUsersData(12));
+shapeData(12);
 
 function Home() {
   return (
