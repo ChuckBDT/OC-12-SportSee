@@ -1,5 +1,11 @@
 import React from "react";
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis } from "recharts";
+import {
+  Radar,
+  RadarChart,
+  PolarGrid,
+  PolarAngleAxis,
+  ResponsiveContainer,
+} from "recharts";
 
 const dataM = [
   { value: 80, kind: "cardio" },
@@ -12,19 +18,19 @@ const dataM = [
 
 export default function PerfRadar({ data }) {
   return (
-    <RadarChart
-      className="bg-zinc-800 rounded-md justify-self-center"
-      outerRadius={90}
-      width={260}
-      height={260}
-      data={dataM}
-    >
-      <PolarGrid stroke="#FFFFFF" />
-      <PolarAngleAxis
-        dataKey="kind"
-        tick={{ fill: "white", fontSize: "12px", fontWeight: "500" }}
-      />
-      <Radar name="Mike" dataKey="value" fill="#FF0101" fillOpacity={0.7} />
-    </RadarChart>
+    <ResponsiveContainer>
+      <RadarChart
+        className="bg-zinc-800 rounded-md justify-self-center"
+        outerRadius={90}
+        data={dataM}
+      >
+        <PolarGrid stroke="#FFFFFF" />
+        <PolarAngleAxis
+          dataKey="kind"
+          tick={{ fill: "white", fontSize: "12px", fontWeight: "500" }}
+        />
+        <Radar name="Mike" dataKey="value" fill="#FF0101" fillOpacity={0.7} />
+      </RadarChart>
+    </ResponsiveContainer>
   );
 }

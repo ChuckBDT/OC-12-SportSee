@@ -16,7 +16,7 @@ function Root() {
     <main className="w-screen h-screen">
       {/* Font medium ??
   Shadow on top nav */}
-      <nav className="w-full relative top-0 left-0 z-10 h-24 font-medium text-2xl flex justify-between items-center pl-8 pr-24 bg-black text-white">
+      <nav className="w-full absolute top-0 left-0 z-10 h-24 font-medium text-2xl flex justify-between items-center pl-8 pr-24 bg-black text-white">
         <img src={logo} alt="Logo SportSee"></img>
         <div href="/">Accueil</div>
         <div href="#">Profil</div>

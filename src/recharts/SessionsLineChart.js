@@ -1,5 +1,5 @@
 import React from "react";
-import { LineChart, Line, XAxis, Tooltip } from "recharts";
+import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from "recharts";
 
 const data = [
   { sessionLength: 37 },
@@ -33,40 +33,40 @@ const CustomTooltip = ({ active, payload, label }) => {
 
 function SessionsLineChart() {
   return (
-    <LineChart
-      className="rounded-md bg-red-project"
-      width={260}
-      height={260}
-      data={data}
-      margin={{
-        bottom: 15,
-      }}
-    >
-      <text y={40} x={25} fill="rgb(255 255 255 / .5)">
-        Durée moyenne
-      </text>
-      <text y={65} x={25} fill="rgb(255 255 255 / .5)">
-        des sessions
-      </text>
+    <ResponsiveContainer>
+      <LineChart
+        className="rounded-md bg-red-project"
+        data={data}
+        margin={{
+          bottom: 15,
+        }}
+      >
+        <text y={40} x={25} fill="rgb(255 255 255 / .5)">
+          Durée moyenne
+        </text>
+        <text y={65} x={25} fill="rgb(255 255 255 / .5)">
+          des sessions
+        </text>
 
-      <XAxis
-        dataKey="day"
-        tick={{ fill: "rgb(255 255 255 / .5" }}
-        axisLine={false}
-        tickLine={false}
-      />
+        <XAxis
+          dataKey="day"
+          tick={{ fill: "rgb(255 255 255 / .5" }}
+          axisLine={false}
+          tickLine={false}
+        />
 
-      <Tooltip content={<CustomTooltip />} cursor={{ fill: "transparent" }} />
+        <Tooltip content={<CustomTooltip />} cursor={{ fill: "transparent" }} />
 
-      <Line
-        type="basis"
-        dataKey="sessionLength"
-        stroke="rgb(255 255 255 / .5"
-        strokeWidth="0.15rem"
-        dot={false}
-        activeDot={{ r: 3, fill: "white" }}
-      />
-    </LineChart>
+        <Line
+          type="basis"
+          dataKey="sessionLength"
+          stroke="rgb(255 255 255 / .5"
+          strokeWidth="0.15rem"
+          dot={false}
+          activeDot={{ r: 3, fill: "white" }}
+        />
+      </LineChart>
+    </ResponsiveContainer>
   );
 }
 
