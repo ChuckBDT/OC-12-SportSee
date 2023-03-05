@@ -1,16 +1,32 @@
-export default async function fetchUsersData(id) {
-  const [userRes, activityRes, averageSessionsRes, performanceRes] =
-    await Promise.all([
-      fetch(`http://localhost:3000/user/${id}`),
-      fetch(`http://localhost:3000/user/${id}/activity`),
-      fetch(`http://localhost:3000/user/${id}/average-sessions`),
-      fetch(`http://localhost:3000/user/${id}/performance`),
-    ]);
+export default async function fetchUsersData(id, mocked) {
+  let user, activity, averageSessions, performance;
 
-  const user = await userRes.json();
-  const activity = await activityRes.json();
-  const averageSessions = await averageSessionsRes.json();
-  const performance = await performanceRes.json();
+  if (mocked) {
+    const [userRes, activityRes, averageSessionsRes, performanceRes] =
+      await Promise.all([
+        fetch(`./data/${id}-id.json`),
+        fetch(`./data/${id}-activity.json`),
+        fetch(`./data/${id}-average-sessions.json`),
+        fetch(`./data/${id}-performance.json`),
+      ]);
 
+    user = await userRes.json();
+    activity = await activityRes.json();
+    averageSessions = await averageSessionsRes.json();
+    performance = await performanceRes.json();
+  } else {
+    const [userRes, activityRes, averageSessionsRes, performanceRes] =
+      await Promise.all([
+        fetch(`http://localhost:3000/user/${id}`),
+        fetch(`http://localhost:3000/user/${id}/activity`),
+        fetch(`http://localhost:3000/user/${id}/average-sessions`),
+        fetch(`http://localhost:3000/user/${id}/performance`),
+      ]);
+
+    user = await userRes.json();
+    activity = await activityRes.json();
+    averageSessions = await averageSessionsRes.json();
+    performance = await performanceRes.json();
+  }
   return [user, activity, averageSessions, performance];
 }
