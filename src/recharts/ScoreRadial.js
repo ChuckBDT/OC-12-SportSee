@@ -13,7 +13,9 @@ const data = [
   },
 ];
 
-const size = 260;
+const size = 300;
+
+// Todo: Adjust the size of the text position
 
 function ScoreRadial() {
   return (

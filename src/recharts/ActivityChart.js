@@ -24,10 +24,9 @@ const CustomTooltip = ({ active, payload }) => {
 };
 
 export default function ActivityChart({ data }) {
-  console.log(data);
   return (
     <div className="col-span-3 h-80 bg-gray-50 rounded-md flex flex-col justify-center items-end">
-      <div className="flex w-full h-full justify-between items-center px-8">
+      <div className="flex w-full h-32 justify-between items-center px-8">
         <p className="text-neutral-900 text-base flex-1">
           Activité quotidienne
         </p>
