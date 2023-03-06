@@ -15,7 +15,7 @@ const name = id.data.userInfos.firstName;
 const activity12 = activity.data.sessions;
 const performance12 = performance;
 
-shapeData(18, true);
+shapeData(12, true);
 
 function Home() {
   return (

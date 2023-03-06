@@ -16,6 +16,15 @@ export default async function shapeData(id, mocked) {
   // Todo: lowercase on name then uppercase on first letter
   console.log("Name : " + userName);
 
+  // Transform day to only day's number
+  console.log(activityChart);
+
+  // Add fake first and fake last data to make line on edges
+  console.log(sessionsLineChart);
+
+  // Change names to french
+  console.log(perfRadar);
+
   // Changing score's scale
   scoreRadial = scoreRadial * 100;
   console.log("Score : " + scoreRadial);
