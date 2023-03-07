@@ -17,10 +17,10 @@ export default async function fetchUsersData(id, mocked) {
   } else {
     const [userRes, activityRes, averageSessionsRes, performanceRes] =
       await Promise.all([
-        fetch(`http://localhost:3000/user/${id}`),
-        fetch(`http://localhost:3000/user/${id}/activity`),
-        fetch(`http://localhost:3000/user/${id}/average-sessions`),
-        fetch(`http://localhost:3000/user/${id}/performance`),
+        fetch(`http://localhost:3456/user/${id}`),
+        fetch(`http://localhost:3456/user/${id}/activity`),
+        fetch(`http://localhost:3456/user/${id}/average-sessions`),
+        fetch(`http://localhost:3456/user/${id}/performance`),
       ]);
 
     user = await userRes.json();
