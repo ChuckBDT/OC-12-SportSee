@@ -10,7 +10,7 @@ export default async function shapeData(id, mocked) {
   const activityChart = data[1].data.sessions;
 
   // Transform day to only day's number
-  // console.log(activityChart);
+  console.log(activityChart);
 
   const sessionsLineChart = lineChartTweak(data[2].data.sessions);
 

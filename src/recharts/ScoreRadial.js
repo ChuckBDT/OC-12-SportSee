@@ -9,6 +9,7 @@ import {
 const size = 300;
 
 // Todo: Adjust the size of the text position
+// Red circle ?
 
 function ScoreRadial({ data }) {
   return (
