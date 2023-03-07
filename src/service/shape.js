@@ -1,4 +1,5 @@
 import fetchUsersData from "./service";
+import lineChartTweak from "./lineChartTweak";
 
 export default async function shapeData(id, mocked) {
   const data = await fetchUsersData(id, mocked);
@@ -7,7 +8,7 @@ export default async function shapeData(id, mocked) {
   let scoreRadial = data[0].data.todayScore
     ? data[0].data.todayScore
     : data[0].data.score;
-  const sideStats = data[0].data.keyData;
+  let sideStats = data[0].data.keyData;
   const activityChart = data[1].data.sessions;
   const sessionsLineChart = data[2].data.sessions;
   const perfRadar = data[3].data;
@@ -19,7 +20,7 @@ export default async function shapeData(id, mocked) {
   // console.log(activityChart);
 
   // Add fake first and fake last data to make line on edges
-  // console.log(sessionsLineChart);
+  lineChartTweak(sessionsLineChart);
 
   // Change names to french
   // console.log(perfRadar);
@@ -27,10 +28,10 @@ export default async function shapeData(id, mocked) {
   // Changing score's scale
   scoreRadial = scoreRadial * 100;
 
-  // Changing key's names and adjusting calories count
-  // console.log(sideStats);
-  //   Object.defineProperty(sideStats, "calorieCount", "calories");
-  //   console.log(sideStats);
+  // Transform calorie count from XXXX to X,XXX
+  sideStats.calorieCount = (sideStats.calorieCount / 1000)
+    .toFixed(3)
+    .replace(/\./g, ",");
 
   const treatedData = {
     name: userName,

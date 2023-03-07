@@ -11,7 +11,6 @@ const size = 300;
 // Todo: Adjust the size of the text position
 
 function ScoreRadial({ data }) {
-  console.log(data);
   return (
     <ResponsiveContainer>
       <RadialBarChart

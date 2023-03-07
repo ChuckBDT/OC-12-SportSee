@@ -12,7 +12,6 @@ function Home() {
   useEffect(() => {
     const getData = async () => {
       const data = await shapeData(18, true);
-      console.log(data);
       setData(data);
     };
     getData();
