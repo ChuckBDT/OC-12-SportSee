@@ -36,7 +36,7 @@ function Home() {
               <span className="text-[#FF0101] capitalize">{data.name}</span>
             </p>
             <p className="font-normal text-lg">
-              Felicitation ! Vous avez explosé vos objectifs hier
+              Felicitation ! Vous avez explosé vos objectifs hier 👏
             </p>
           </div>
           <div className="w-1/5 flex items-start justify-end">

@@ -49,7 +49,7 @@ export default function ActivityChart({ data }) {
           barGap={8}
         >
           <CartesianGrid strokeDasharray="2 2" vertical={false} />
-          <XAxis stroke="#9B9EAC" tickLine={false} />
+          <XAxis stroke="#9B9EAC" tickLine={false} dataKey="day" />
           <YAxis
             yAxisId="right"
             orientation="right"

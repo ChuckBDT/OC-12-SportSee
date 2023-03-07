@@ -1,16 +1,14 @@
 import fetchUsersData from "./service";
 import lineChartTweak from "./lineChartTweak";
 import perfRadarTweak from "./perfRadarTweak";
+import activityChartTweak from "./activityChartTweak";
 
 export default async function shapeData(id, mocked) {
   const data = await fetchUsersData(id, mocked);
 
   const userName = data[0].data.userInfos.firstName;
 
-  const activityChart = data[1].data.sessions;
-
-  // Transform day to only day's number
-  console.log(activityChart);
+  const activityChart = activityChartTweak(data[1].data.sessions);
 
   const sessionsLineChart = lineChartTweak(data[2].data.sessions);
 
