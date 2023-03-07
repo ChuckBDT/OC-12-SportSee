@@ -6,18 +6,12 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-const data = [
-  {
-    name: "value",
-    uv: 12,
-  },
-];
-
 const size = 300;
 
 // Todo: Adjust the size of the text position
 
-function ScoreRadial() {
+function ScoreRadial({ data }) {
+  console.log(data);
   return (
     <ResponsiveContainer>
       <RadialBarChart
@@ -39,7 +33,7 @@ function ScoreRadial() {
           axisLineType="circle"
           tick={false}
         />
-        <RadialBar fill="#FF0000" cornerRadius={5} dataKey="uv" />
+        <RadialBar fill="#FF0000" cornerRadius={5} dataKey="score" />
         <text
           x={size / 2}
           y={110}
@@ -49,7 +43,7 @@ function ScoreRadial() {
           dominantBaseline="middle"
           className="text-2xl font-bold"
         >
-          {data[0].uv} %
+          {data.score} %
         </text>
         <text
           x={size / 2}

@@ -1,18 +1,6 @@
 import React from "react";
 import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from "recharts";
 
-const data = [
-  { sessionLength: 37 },
-  { day: 1, sessionLength: 30 },
-  { day: 2, sessionLength: 23 },
-  { day: 3, sessionLength: 45 },
-  { day: 4, sessionLength: 50 },
-  { day: 5, sessionLength: 0 },
-  { day: 6, sessionLength: 0 },
-  { day: 7, sessionLength: 60 },
-  { sessionLength: 75 },
-];
-
 const CustomTooltip = ({ active, payload, label }) => {
   // Thanks to https://stackoverflow.com/a/72964329
   // Customized to show Tooltip only if a label is provided
@@ -31,7 +19,7 @@ const CustomTooltip = ({ active, payload, label }) => {
   return null;
 };
 
-function SessionsLineChart() {
+function SessionsLineChart({ data }) {
   return (
     <ResponsiveContainer>
       <LineChart

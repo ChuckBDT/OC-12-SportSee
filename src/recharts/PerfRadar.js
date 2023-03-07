@@ -7,22 +7,14 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-const dataM = [
-  { value: 80, kind: "cardio" },
-  { value: 120, kind: "energy" },
-  { value: 140, kind: "endurance" },
-  { value: 50, kind: "strength" },
-  { value: 200, kind: "speed" },
-  { value: 90, kind: "intensity" },
-];
-
 export default function PerfRadar({ data }) {
   return (
     <ResponsiveContainer>
       <RadarChart
         className="bg-zinc-800 rounded-md justify-self-center"
         outerRadius={90}
-        data={dataM}
+        // Todo: Fix data.data issue in Shape
+        data={data.data}
       >
         <PolarGrid stroke="#FFFFFF" />
         <PolarAngleAxis
