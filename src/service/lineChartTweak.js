@@ -17,7 +17,6 @@ export default function lineChartTweak(data) {
   function calculateLastFake() {
     const lastFakeData =
       data[data.length - 1].sessionLength - data[data.length - 2].sessionLength;
-    console.log(lastFakeData);
 
     if (lastFakeData > 0) {
       return data[data.length - 1].sessionLength + lastFakeData;

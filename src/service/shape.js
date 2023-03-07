@@ -1,33 +1,26 @@
 import fetchUsersData from "./service";
 import lineChartTweak from "./lineChartTweak";
+import perfRadarTweak from "./perfRadarTweak";
 
 export default async function shapeData(id, mocked) {
   const data = await fetchUsersData(id, mocked);
 
   const userName = data[0].data.userInfos.firstName;
-  let scoreRadial = data[0].data.todayScore
-    ? data[0].data.todayScore
-    : data[0].data.score;
-  let sideStats = data[0].data.keyData;
-  const activityChart = data[1].data.sessions;
-  const sessionsLineChart = data[2].data.sessions;
-  const perfRadar = data[3].data;
 
-  // Todo: lowercase on name then uppercase on first letter
-  // console.log("Name : " + userName);
+  const activityChart = data[1].data.sessions;
 
   // Transform day to only day's number
   // console.log(activityChart);
 
-  // Add fake first and fake last data to make line on edges
-  lineChartTweak(sessionsLineChart);
+  const sessionsLineChart = lineChartTweak(data[2].data.sessions);
 
-  // Change names to french
-  // console.log(perfRadar);
+  const perfRadar = perfRadarTweak(data[3].data);
 
-  // Changing score's scale
-  scoreRadial = scoreRadial * 100;
+  const scoreRadial = data[0].data.todayScore
+    ? data[0].data.todayScore * 100
+    : data[0].data.score * 100;
 
+  let sideStats = data[0].data.keyData;
   // Transform calorie count from XXXX to X,XXX
   sideStats.calorieCount = (sideStats.calorieCount / 1000)
     .toFixed(3)

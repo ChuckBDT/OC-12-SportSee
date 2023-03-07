@@ -11,7 +11,7 @@ function Home() {
 
   useEffect(() => {
     const getData = async () => {
-      const data = await shapeData(18, true);
+      const data = await shapeData(12, true);
       setData(data);
     };
     getData();
@@ -21,7 +21,7 @@ function Home() {
     return (
       <div className="flex flex-col h-full justify-between pl-56 pt-44 pr-28 pb-16">
         <p className="font-medium text-5xl">
-          Bonjour <span className="text-[#FF0101]">{data.name}</span>
+          Bonjour <span className="text-[#FF0101] capitalize">{data.name}</span>
         </p>
         <p className="font-normal text-lg">
           Felicitation ! Vous avez explosé vos objectifs hier
