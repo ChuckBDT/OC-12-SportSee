@@ -1,8 +1,10 @@
 import fetchUsersData from "./service";
+
 import lineChartTweak from "./lineChartTweak";
 import perfRadarTweak from "./perfRadarTweak";
 import activityChartTweak from "./activityChartTweak";
 import scoreRadialTweak from "./scoreRadialTweak";
+import sideStatsTweak from "./sideStatsTweak";
 
 export default async function shapeData(id, mocked) {
   const data = await fetchUsersData(id, mocked);
@@ -17,11 +19,7 @@ export default async function shapeData(id, mocked) {
 
   const scoreRadial = scoreRadialTweak(data[0].data);
 
-  let sideStats = data[0].data.keyData;
-  // Transform calorie count from XXXX to X,XXX
-  sideStats.calorieCount = (sideStats.calorieCount / 1000)
-    .toFixed(3)
-    .replace(/\./g, ",");
+  const sideStats = sideStatsTweak(data[0].data.keyData);
 
   const treatedData = {
     name: userName,
