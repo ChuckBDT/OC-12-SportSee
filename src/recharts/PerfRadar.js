@@ -9,7 +9,7 @@ import {
 
 export default function PerfRadar({ data }) {
   return (
-    <ResponsiveContainer>
+    <ResponsiveContainer height={260}>
       <RadarChart
         className="bg-zinc-800 rounded-md justify-self-center"
         outerRadius={90}

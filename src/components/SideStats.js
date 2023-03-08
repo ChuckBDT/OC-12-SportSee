@@ -6,7 +6,7 @@ function SideStats({ data }) {
   // and all other colors
 
   return (
-    <div className="flex flex-col justify-between items-center  w-1/4 ">
+    <div className="flex flex-col justify-between items-center  w-3/12 ">
       <div className="h-32 w-full bg-gray-50 flex justify-center items-center rounded ">
         <div className="h-16 w-16 bg-red-100 rounded-md flex justify-center items-center">
           <svg

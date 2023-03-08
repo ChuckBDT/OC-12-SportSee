@@ -1,4 +1,5 @@
 // Todo: Comment this function
+// Transform numbers into days on x axis
 
 export default function lineChartTweak(data) {
   function calculateFirstFake() {

@@ -21,7 +21,7 @@ const CustomTooltip = ({ active, payload, label }) => {
 
 function SessionsLineChart({ data }) {
   return (
-    <ResponsiveContainer>
+    <ResponsiveContainer height={260}>
       <LineChart
         className="rounded-md bg-red-project"
         data={data}
