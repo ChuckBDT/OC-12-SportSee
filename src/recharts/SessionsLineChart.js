@@ -1,5 +1,12 @@
 import React from "react";
-import { LineChart, Line, XAxis, Tooltip, ResponsiveContainer } from "recharts";
+import {
+  LineChart,
+  Line,
+  XAxis,
+  Tooltip,
+  ResponsiveContainer,
+  YAxis,
+} from "recharts";
 
 const CustomTooltip = ({ active, payload, label }) => {
   // Thanks to https://stackoverflow.com/a/72964329
@@ -43,6 +50,8 @@ function SessionsLineChart({ data }) {
           tickLine={false}
         />
 
+        <YAxis padding={{ top: 80 }} orientation="right" hide={true} />
+
         <Tooltip content={<CustomTooltip />} cursor={{ fill: "transparent" }} />
 
         <Line
@@ -51,7 +60,12 @@ function SessionsLineChart({ data }) {
           stroke="rgb(255 255 255 / .5"
           strokeWidth="0.15rem"
           dot={false}
-          activeDot={{ r: 3, fill: "white" }}
+          activeDot={{
+            r: 4,
+            fill: "white",
+            stroke: "rgb(255,255,255, .4",
+            strokeWidth: "8px",
+          }}
         />
       </LineChart>
     </ResponsiveContainer>
