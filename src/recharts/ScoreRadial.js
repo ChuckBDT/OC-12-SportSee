@@ -6,11 +6,6 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-const size = 300;
-
-// Todo: Adjust the size of the text position
-// Red circle ?
-
 function ScoreRadial({ data }) {
   return (
     <ResponsiveContainer height={260}>
@@ -35,7 +30,7 @@ function ScoreRadial({ data }) {
         />
         <RadialBar fill="#FF0000" cornerRadius={5} dataKey="score" />
         <text
-          x={size / 2}
+          x={"50%"}
           y={110}
           //   Equivalent of text-neutral-900 of TailwindCSS
           fill="rgb(23 23 23)"
@@ -46,7 +41,7 @@ function ScoreRadial({ data }) {
           {data[0].score} %
         </text>
         <text
-          x={size / 2}
+          x={"50%"}
           y={140}
           //   Equivalent of text-neutral-500 of TailwindCSS
           fill="rgb(115 115 115)"
