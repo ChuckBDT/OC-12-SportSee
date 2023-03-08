@@ -30,7 +30,7 @@ function Home() {
 
   if (data) {
     return (
-      <div className="flex flex-col h-full justify-start pl-56 pt-44 pr-28 pb-16">
+      <div className="flex flex-col h-full justify-start pl-56 pt-40 pr-28 pb-16">
         <header className="flex h-44">
           <div className="w-4/5 flex flex-col justify-start">
             <p className="font-medium text-5xl">
