@@ -43,7 +43,7 @@ function ScoreRadial({ data }) {
           dominantBaseline="middle"
           className="text-2xl font-bold"
         >
-          {data.score} %
+          {data[0].score} %
         </text>
         <text
           x={size / 2}

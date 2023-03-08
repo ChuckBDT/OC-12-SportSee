@@ -6,6 +6,7 @@
 
 /* Special rules to fill the circle in the Score Radial component */
 /* Those rules are not handled by Recharts yet */
+
 .recharts-polar-angle-axis circle {
     fill: white;
     r:75;
@@ -27,7 +28,6 @@
 
 .weight-circle::after{
     background-color: #282D30;
-
 }
 
 .calorie-circle::after {

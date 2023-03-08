@@ -2,6 +2,7 @@ import fetchUsersData from "./service";
 import lineChartTweak from "./lineChartTweak";
 import perfRadarTweak from "./perfRadarTweak";
 import activityChartTweak from "./activityChartTweak";
+import scoreRadialTweak from "./scoreRadialTweak";
 
 export default async function shapeData(id, mocked) {
   const data = await fetchUsersData(id, mocked);
@@ -14,9 +15,7 @@ export default async function shapeData(id, mocked) {
 
   const perfRadar = perfRadarTweak(data[3].data);
 
-  const scoreRadial = data[0].data.todayScore
-    ? data[0].data.todayScore * 100
-    : data[0].data.score * 100;
+  const scoreRadial = scoreRadialTweak(data[0].data);
 
   let sideStats = data[0].data.keyData;
   // Transform calorie count from XXXX to X,XXX
@@ -29,7 +28,7 @@ export default async function shapeData(id, mocked) {
     activityChart: activityChart,
     sessionsLineChart: sessionsLineChart,
     perfRadar: perfRadar,
-    scoreRadial: { score: scoreRadial },
+    scoreRadial: scoreRadial,
     sideStats: sideStats,
   };
   return treatedData;
