@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
+
+import shapeData from "../service/shape";
+
 import ActivityChart from "../recharts/ActivityChart";
 import PerfRadar from "../recharts/PerfRadar";
 import SideStats from "../components/SideStats";
 import ScoreRadial from "../recharts/ScoreRadial";
 import SessionsLineChart from "../recharts/SessionsLineChart";
-import shapeData from "../service/shape";
 
 function Home() {
   const [data, setData] = useState(null);
@@ -52,7 +54,6 @@ function Home() {
           </div>
         </header>
 
-        {/* Todo: Fix the proportions */}
         <div className="w-full flex gap-x-8 ">
           <div className="flex flex-col h-full gap-y-8 w-9/12 justify-between ">
             <ActivityChart data={data.activityChart} />

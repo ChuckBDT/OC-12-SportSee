@@ -12,7 +12,7 @@ export default function PerfRadar({ data }) {
     <ResponsiveContainer height={260}>
       <RadarChart
         className="bg-zinc-800 rounded-md justify-self-center"
-        outerRadius={90}
+        outerRadius={80}
         data={data}
         startAngle={-150}
         endAngle={210}
