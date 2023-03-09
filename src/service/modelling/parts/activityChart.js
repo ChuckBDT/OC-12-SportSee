@@ -1,4 +1,4 @@
-export default function activityChartTweak(data) {
+export default function activityChart(data) {
   for (let el of data) {
     el.day = new Date(el.day).getDate();
   }

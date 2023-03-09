@@ -1,13 +1,15 @@
+import modelling from "./modelling/modelling";
+
 export default async function fetchUsersData(id, mocked) {
   let user, activity, averageSessions, performance;
 
   if (mocked) {
     const [userRes, activityRes, averageSessionsRes, performanceRes] =
       await Promise.all([
-        fetch(`./data/${id}-id.json`),
-        fetch(`./data/${id}-activity.json`),
-        fetch(`./data/${id}-average-sessions.json`),
-        fetch(`./data/${id}-performance.json`),
+        fetch(`./mockedData/${id}-id.json`),
+        fetch(`./mockedData/${id}-activity.json`),
+        fetch(`./mockedData/${id}-average-sessions.json`),
+        fetch(`./mockedData/${id}-performance.json`),
       ]);
 
     user = await userRes.json();
@@ -28,5 +30,5 @@ export default async function fetchUsersData(id, mocked) {
     averageSessions = await averageSessionsRes.json();
     performance = await performanceRes.json();
   }
-  return [user, activity, averageSessions, performance];
+  return modelling([user, activity, averageSessions, performance]);
 }

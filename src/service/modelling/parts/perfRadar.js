@@ -1,4 +1,4 @@
-export default function perfRadarTweak(data) {
+export default function perfRadar(data) {
   const treatedData = [];
   const frenchKinds = {
     1: "Cardio",

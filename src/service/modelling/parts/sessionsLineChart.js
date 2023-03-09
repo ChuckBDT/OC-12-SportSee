@@ -1,7 +1,7 @@
 // Todo: Comment this function
 // Transform numbers into days on x axis
 
-export default function lineChartTweak(data) {
+export default function sessionsLineChart(data) {
   function calculateFirstFake() {
     const firstFakeData = data[1].sessionLength - data[0].sessionLength;
 
