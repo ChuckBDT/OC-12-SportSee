@@ -1,14 +1,10 @@
 import React from "react";
 
 function SideStats({ data }) {
-  // Tailwind Gray Color (#FBFBFB)
-  // Tailwind Red Fire color (#FF0000)
-  // and all other colors
-
   return (
     <div className="flex flex-col justify-between items-center  w-3/12 ">
-      <div className="h-32 w-full bg-gray-50 flex justify-center items-center rounded ">
-        <div className="h-16 w-16 bg-red-100 rounded-md flex justify-center items-center">
+      <div className="h-32 w-full bg-grayLight flex justify-center items-center rounded ">
+        <div className="h-16 w-16 bg-lightRed rounded-md flex justify-center items-center">
           <svg
             width="17"
             height="20"
@@ -22,13 +18,13 @@ function SideStats({ data }) {
             />
           </svg>
         </div>
-        <div className="text-xl font-bold text-neutral-900 flex flex-col justify-center items-start w-2/4 pl-8">
+        <div className="text-xl font-bold text-grayDark flex flex-col justify-center items-start w-2/4 pl-8">
           {data.calorieCount}kCal <br />
-          <span className="text-sm font-medium text-neutral-500">Calories</span>
+          <span className="text-sm font-medium text-grayMedium">Calories</span>
         </div>
       </div>
-      <div className="h-32 w-full bg-gray-50 flex justify-center items-center rounded">
-        <div className="h-16 w-16 bg-sky-100 rounded-md flex justify-center items-center">
+      <div className="h-32 w-full bg-grayLight flex justify-center items-center rounded">
+        <div className="h-16 w-16 bg-lightBlue rounded-md flex justify-center items-center">
           <svg
             width="19"
             height="19"
@@ -42,15 +38,13 @@ function SideStats({ data }) {
             />
           </svg>
         </div>
-        <div className="text-xl font-bold text-neutral-900 flex flex-col justify-center items-start w-2/4 pl-8">
+        <div className="text-xl font-bold text-grayDark flex flex-col justify-center items-start w-2/4 pl-8">
           {data.proteinCount}g <br />
-          <span className="text-sm font-medium text-neutral-500">
-            Proteines
-          </span>
+          <span className="text-sm font-medium text-grayMedium">Proteines</span>
         </div>
       </div>
-      <div className="h-32 w-full bg-gray-50 flex justify-center items-center rounded">
-        <div className="h-16 w-16 bg-amber-100 rounded-md flex justify-center items-center">
+      <div className="h-32 w-full bg-grayLight flex justify-center items-center rounded">
+        <div className="h-16 w-16 bg-lightYellow rounded-md flex justify-center items-center">
           <svg
             width="18"
             height="20"
@@ -72,13 +66,13 @@ function SideStats({ data }) {
             />
           </svg>
         </div>
-        <div className="text-xl font-bold text-neutral-900 flex flex-col justify-center items-start w-2/4 pl-8">
+        <div className="text-xl font-bold text-grayDark flex flex-col justify-center items-start w-2/4 pl-8">
           {data.carbohydrateCount}g <br />
-          <span className="text-sm font-medium text-neutral-500">Glucides</span>
+          <span className="text-sm font-medium text-grayMedium">Glucides</span>
         </div>
       </div>
-      <div className="h-32 w-full bg-gray-50 flex justify-center items-center rounded">
-        <div className="h-16 w-16 bg-pink-100 rounded-md flex justify-center items-center">
+      <div className="h-32 w-full bg-grayLight flex justify-center items-center rounded">
+        <div className="h-16 w-16 bg-lightPink rounded-md flex justify-center items-center">
           <svg
             width="20"
             height="19"
@@ -102,9 +96,9 @@ function SideStats({ data }) {
             />
           </svg>
         </div>
-        <div className="text-xl font-bold text-neutral-900 flex flex-col justify-center items-start w-2/4 pl-8">
+        <div className="text-xl font-bold text-grayDark flex flex-col justify-center items-start w-2/4 pl-8">
           {data.lipidCount}g <br />
-          <span className="text-sm font-medium text-neutral-500">Lipides</span>
+          <span className="text-sm font-medium text-grayMedium">Lipides</span>
         </div>
       </div>
     </div>

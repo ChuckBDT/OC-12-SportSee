@@ -42,7 +42,7 @@ function SessionsLineChart({ data }) {
           x={25}
           fill="rgb(255 255 255 / .5)"
         >
-          Durée moyenne des
+          Durée moyenne
         </text>
         <text
           className="font-medium"
@@ -50,7 +50,7 @@ function SessionsLineChart({ data }) {
           x={25}
           fill="rgb(255 255 255 / .5)"
         >
-          sessions
+          des sessions
         </text>
 
         <XAxis

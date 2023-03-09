@@ -13,10 +13,8 @@ import logo from "./assets/logo.svg";
 
 function Root() {
   return (
-    <main className="w-screen h-screen">
-      {/* Font medium ??
-  Shadow on top nav */}
-      <nav className="w-full fixed top-0 left-0 z-10 h-24 font-medium text-2xl flex justify-between items-center pl-8 pr-24 bg-black text-white">
+    <main className="h-screen">
+      <nav className="w-full fixed top-0 left-0 z-10 h-24 font-medium text-2xl flex justify-between items-center pl-8 pr-24 bg-black text-white custom-shadow">
         <img src={logo} alt="Logo SportSee"></img>
         <div href="/">Accueil</div>
         <div href="#">Profil</div>

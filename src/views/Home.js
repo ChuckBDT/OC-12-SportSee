@@ -34,8 +34,7 @@ function Home() {
         <header className="flex h-44">
           <div className="w-4/5 flex flex-col justify-start">
             <p className="font-medium text-5xl">
-              Bonjour{" "}
-              <span className="text-[#FF0101] capitalize">{data.name}</span>
+              Bonjour <span className="text-red capitalize">{data.name}</span>
             </p>
             <p className="font-normal py-8 text-lg">
               Félicitation ! Vous avez explosé vos objectifs hier 👏
