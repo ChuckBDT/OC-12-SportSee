@@ -35,7 +35,6 @@
 }
 
 /* Toggle on Home Page */
-
 input[type=checkbox] {
     height: 0;
     width: 0;
@@ -73,6 +72,4 @@ input:checked + label:after {
     left: calc(100% - 5px);
     transform: translateX(-100%);
 }
-
-
 /* End toggle on Home Page */
