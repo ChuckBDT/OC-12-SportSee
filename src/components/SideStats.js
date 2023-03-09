@@ -2,7 +2,7 @@ import React from "react";
 
 function SideStats({ data }) {
   return (
-    <div className="flex flex-col justify-between items-center  w-3/12 ">
+    <div className="flex xl:flex-col justify-between items-center w-full xl:w-3/12 ">
       <div className="h-32 w-full bg-grayLight flex justify-center items-center rounded ">
         <div className="h-16 w-16 bg-lightRed rounded-md flex justify-center items-center">
           <svg
@@ -18,7 +18,7 @@ function SideStats({ data }) {
             />
           </svg>
         </div>
-        <div className="text-xl font-bold text-grayDark flex flex-col justify-center items-start w-2/4 pl-8">
+        <div className="text-xl font-bold text-grayDark flex flex-col justify-center items-start w-2/4 pl-3 xl:pl-8">
           {data.calorieCount}kCal <br />
           <span className="text-sm font-medium text-grayMedium">Calories</span>
         </div>
@@ -38,7 +38,7 @@ function SideStats({ data }) {
             />
           </svg>
         </div>
-        <div className="text-xl font-bold text-grayDark flex flex-col justify-center items-start w-2/4 pl-8">
+        <div className="text-xl font-bold text-grayDark flex flex-col justify-center items-start w-2/4 pl-3 xl:pl-8">
           {data.proteinCount}g <br />
           <span className="text-sm font-medium text-grayMedium">Proteines</span>
         </div>
@@ -66,7 +66,7 @@ function SideStats({ data }) {
             />
           </svg>
         </div>
-        <div className="text-xl font-bold text-grayDark flex flex-col justify-center items-start w-2/4 pl-8">
+        <div className="text-xl font-bold text-grayDark flex flex-col justify-center items-start w-2/4 pl-3 xl:pl-8">
           {data.carbohydrateCount}g <br />
           <span className="text-sm font-medium text-grayMedium">Glucides</span>
         </div>
@@ -96,7 +96,7 @@ function SideStats({ data }) {
             />
           </svg>
         </div>
-        <div className="text-xl font-bold text-grayDark flex flex-col justify-center items-start w-2/4 pl-8">
+        <div className="text-xl font-bold text-grayDark flex flex-col justify-center items-start w-2/4 pl-3 xl:pl-8">
           {data.lipidCount}g <br />
           <span className="text-sm font-medium text-grayMedium">Lipides</span>
         </div>

@@ -11,7 +11,7 @@ import { colors } from "../../assets/colors";
 
 function ScoreRadial({ data }) {
   return (
-    <ResponsiveContainer height={260} minWidth={260}>
+    <ResponsiveContainer height={260}>
       <RadialBarChart
         className=" bg-grayLight rounded-md relative flex justify-center items-center justify-self-end"
         innerRadius={80}

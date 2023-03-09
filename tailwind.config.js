@@ -18,6 +18,10 @@ module.exports = {
         grayMedium: "#74798C",
         grayDark: "#282D30",
       },
+      screens: {
+        xl: "1440px",
+        // => @media (min-width: 1440px) { ... }
+      },
     },
   },
   plugins: [],

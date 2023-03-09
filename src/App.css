@@ -81,7 +81,7 @@ label:after {
 }
   
 input:checked + label {
-    background: var(--redCalories);
+    background: var(--red);
 }
   
 input:checked + label:after {
