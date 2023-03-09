@@ -18,7 +18,7 @@ function ScoreRadial({ data }) {
         endAngle={450}
         data={data}
       >
-        <text y={40} x={25} fill="rgb(23 23 23)">
+        <text className="font-medium" y={40} x={25} fill="rgb(23 23 23)">
           Score
         </text>
         <PolarAngleAxis

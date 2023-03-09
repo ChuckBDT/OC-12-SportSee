@@ -36,10 +36,20 @@ function SessionsLineChart({ data }) {
           bottom: 15,
         }}
       >
-        <text y={40} x={25} fill="rgb(255 255 255 / .5)">
+        <text
+          className="font-medium"
+          y={40}
+          x={25}
+          fill="rgb(255 255 255 / .5)"
+        >
           Durée moyenne des
         </text>
-        <text y={65} x={25} fill="rgb(255 255 255 / .5)">
+        <text
+          className="font-medium"
+          y={65}
+          x={25}
+          fill="rgb(255 255 255 / .5)"
+        >
           sessions
         </text>
 
