@@ -1,9 +1,11 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
+        // If you modify this list, also modify the variable list in App.css
         red: "#FF0000",
         lightRed: "rgba(255,0,0,0.1)",
         blue: "#4AB8FF",

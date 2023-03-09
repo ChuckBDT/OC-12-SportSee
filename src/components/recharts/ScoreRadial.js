@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   RadialBarChart,
   RadialBar,
@@ -6,11 +7,13 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
+import { colors } from "../../assets/colors";
+
 function ScoreRadial({ data }) {
   return (
     <ResponsiveContainer height={260} minWidth={260}>
       <RadialBarChart
-        className=" bg-gray-50 rounded-md relative flex justify-center items-center justify-self-end"
+        className=" bg-grayLight rounded-md relative flex justify-center items-center justify-self-end"
         innerRadius={80}
         outerRadius={90}
         barSize={10}
@@ -18,7 +21,7 @@ function ScoreRadial({ data }) {
         endAngle={450}
         data={data}
       >
-        <text className="font-medium" y={40} x={25} fill="rgb(23 23 23)">
+        <text className="font-medium" y={40} x={25} fill={colors.grayDark}>
           Score
         </text>
         <PolarAngleAxis
@@ -28,12 +31,11 @@ function ScoreRadial({ data }) {
           axisLineType="circle"
           tick={false}
         />
-        <RadialBar fill="#FF0000" cornerRadius={5} dataKey="score" />
+        <RadialBar fill={colors.red} cornerRadius={5} dataKey="score" />
         <text
           x={"50%"}
           y={110}
-          //   Equivalent of text-neutral-900 of TailwindCSS
-          fill="rgb(23 23 23)"
+          fill={colors.grayDark}
           textAnchor="middle"
           dominantBaseline="middle"
           className="text-2xl font-bold"
@@ -43,8 +45,7 @@ function ScoreRadial({ data }) {
         <text
           x={"50%"}
           y={140}
-          //   Equivalent of text-neutral-500 of TailwindCSS
-          fill="rgb(115 115 115)"
+          fill={colors.grayMedium}
           textAnchor="middle"
           dominantBaseline="middle"
           className="text-base font-medium"

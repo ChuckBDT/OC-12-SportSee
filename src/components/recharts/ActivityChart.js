@@ -9,11 +9,13 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
+import { colors } from "../../assets/colors";
+
 const CustomTooltip = ({ active, payload }) => {
   // Thanks to https://stackoverflow.com/a/72964329
   if (active && payload && payload.length) {
     return (
-      <div className="h-20 w-14 bg-red-600 text-white flex flex-col justify-around items-center">
+      <div className="h-20 w-14 bg-red text-white flex flex-col justify-around items-center">
         <p className="font-medium text-xs">{`${payload[0].value} kg`}</p>
         <p className="font-medium text-xs">{`${payload[1].value}Kcal`}</p>
       </div>
@@ -25,15 +27,13 @@ const CustomTooltip = ({ active, payload }) => {
 
 export default function ActivityChart({ data }) {
   return (
-    <div className=" h-80 bg-gray-50 rounded-md flex flex-col justify-center items-end">
+    <div className=" h-80 bg-grayLight rounded-md flex flex-col justify-center items-end">
       <div className="flex w-full h-36 justify-between items-center px-8 font-medium">
-        <p className="text-neutral-900 text-base flex-1 ">
-          Activité quotidienne
-        </p>
-        <p className="text-neutral-500 text-sm pl-4 ml-4 weight-circle flex flex-row-reverse justify-between items-center relative">
+        <p className="text-grayDark text-base flex-1 ">Activité quotidienne</p>
+        <p className="text-grayMedium text-sm pl-4 ml-4 weight-circle flex flex-row-reverse justify-between items-center relative">
           Poids (kg)
         </p>
-        <p className="text-neutral-500 text-sm pl-4 ml-4 calorie-circle flex flex-row-reverse justify-between items-center relative">
+        <p className="text-grayMedium text-sm pl-4 ml-4 calorie-circle flex flex-row-reverse justify-between items-center relative">
           Calories brûlées (kCal)
         </p>
       </div>
@@ -49,12 +49,12 @@ export default function ActivityChart({ data }) {
           barGap={8}
         >
           <CartesianGrid strokeDasharray="2 2" vertical={false} />
-          <XAxis stroke="#9B9EAC" tickLine={false} dataKey="day" />
+          <XAxis stroke={colors.grayMedium} tickLine={false} dataKey="day" />
           <YAxis
             yAxisId="right"
             orientation="right"
             dataKey="kilogram"
-            stroke="#9B9EAC"
+            stroke={colors.grayMedium}
             domain={["dataMin-10", "dataMax+1"]}
             axisLine={false}
             tickLine={false}
@@ -77,14 +77,14 @@ export default function ActivityChart({ data }) {
             dataKey="kilogram"
             barSize={7}
             radius={[5, 5, 0, 0]}
-            fill="#282D30"
+            fill={colors.grayDark}
           />
           <Bar
             yAxisId="left"
             dataKey="calories"
             barSize={7}
             radius={[5, 5, 0, 0]}
-            fill="#ff0000"
+            fill={colors.red}
           />
         </BarChart>
       </ResponsiveContainer>

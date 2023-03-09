@@ -30,7 +30,7 @@ function SessionsLineChart({ data }) {
   return (
     <ResponsiveContainer height={260}>
       <LineChart
-        className="rounded-md bg-red-project"
+        className="rounded-md bg-red"
         data={data}
         margin={{
           bottom: 15,
@@ -40,7 +40,8 @@ function SessionsLineChart({ data }) {
           className="font-medium"
           y={40}
           x={25}
-          fill="rgb(255 255 255 / .5)"
+          fill="white"
+          fillOpacity={0.5}
         >
           Durée moyenne
         </text>
@@ -48,14 +49,16 @@ function SessionsLineChart({ data }) {
           className="font-medium"
           y={65}
           x={25}
-          fill="rgb(255 255 255 / .5)"
+          fill="white"
+          fillOpacity={0.5}
         >
           des sessions
         </text>
 
         <XAxis
           dataKey="day"
-          tick={{ fill: "rgb(255 255 255 / .5" }}
+          tick={{ fill: "white" }}
+          opacity={0.5}
           axisLine={false}
           tickLine={false}
         />
@@ -67,13 +70,14 @@ function SessionsLineChart({ data }) {
         <Line
           type="basis"
           dataKey="sessionLength"
-          stroke="rgb(255 255 255 / .5"
+          stroke="white"
+          strokeOpacity={0.5}
           strokeWidth="0.15rem"
           dot={false}
           activeDot={{
             r: 4,
             fill: "white",
-            stroke: "rgb(255,255,255, .4",
+            stroke: "rgb(255,255,255, .4)",
             strokeWidth: "8px",
           }}
         />
