@@ -15,7 +15,7 @@ const CustomTooltip = ({ active, payload }) => {
   // Thanks to https://stackoverflow.com/a/72964329
   if (active && payload && payload.length) {
     return (
-      <div className="h-20 w-14 bg-red text-white flex flex-col justify-around items-center">
+      <div className="h-20 w-14 bg-red text-white flex flex-col justify-around items-center  border-0">
         <p className="font-medium text-xs">{`${payload[0].value} kg`}</p>
         <p className="font-medium text-xs">{`${payload[1].value}Kcal`}</p>
       </div>
@@ -69,7 +69,8 @@ export default function ActivityChart({ data }) {
           />
           <Tooltip
             content={<CustomTooltip />}
-            cursor={{ fill: "transparent" }}
+            cursor={{ fill: "rgba(196, 196, 196, 0.5)" }}
+            wrapperStyle={{ outline: "none" }}
           />
 
           <Bar

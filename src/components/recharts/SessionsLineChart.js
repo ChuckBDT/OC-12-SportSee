@@ -65,7 +65,11 @@ function SessionsLineChart({ data }) {
 
         <YAxis padding={{ top: 80 }} orientation="right" hide={true} />
 
-        <Tooltip content={<CustomTooltip />} cursor={{ fill: "transparent" }} />
+        <Tooltip
+          content={<CustomTooltip />}
+          cursor={{ fill: "transparent" }}
+          wrapperStyle={{ outline: "none" }}
+        />
 
         <Line
           type="basis"
