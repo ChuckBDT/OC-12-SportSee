@@ -11,9 +11,7 @@ import {
 const CustomTooltip = ({ active, payload, label }) => {
   // Thanks to https://stackoverflow.com/a/72964329
   // Customized to show Tooltip only if a label is provided
-  // As the first and last object of the array contain fake
-  // data without labels to display the line on the edges
-  // of the chart, the tooltip won't show the fake data
+  // See comment on /src/service/modelling/parts/sessionsLineChart.js
 
   if (active && payload && payload.length && label) {
     return (
@@ -22,7 +20,6 @@ const CustomTooltip = ({ active, payload, label }) => {
       </div>
     );
   }
-
   return null;
 };
 

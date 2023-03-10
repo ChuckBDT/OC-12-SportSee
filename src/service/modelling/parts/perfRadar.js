@@ -1,3 +1,8 @@
+// This function has two goals :
+// 1. Translate the kinds from english to french
+// 2. Purify the data by taking only what's necessary for
+//    the component to work properly
+
 export default function perfRadar(data) {
   const treatedData = [];
   const frenchKinds = {

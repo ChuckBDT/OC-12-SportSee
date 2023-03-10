@@ -1,5 +1,18 @@
 import modelling from "./modelling/modelling";
 
+/**
+ * Fetch function to get all the user's data
+ * from the API or the mocked data
+ *
+ * The received data is stored in an array then
+ * passed to the function modelling, the data returned
+ * from modelling is then returned.
+ *
+ * @param {number} id
+ * @param {boolean} mocked
+ * @returns {{}}
+ */
+
 export default async function fetchUsersData(id, mocked) {
   let user, activity, averageSessions, performance;
   let [userRes, activityRes, averageSessionsRes, performanceRes] = [];

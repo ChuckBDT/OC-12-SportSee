@@ -4,6 +4,17 @@ import scoreRadial from "./parts/scoreRadial";
 import sessionsLineChart from "./parts/sessionsLineChart";
 import sideStats from "./parts/sideStats";
 
+/**
+ * Modeling function for the fetched data from service
+ *
+ * The goal is to model every data received to avoid any
+ * data treatment in the components in which they will be
+ * passed through props
+ *
+ * @param {Array} data
+ * @returns {{}}
+ */
+
 export default async function modelling(data) {
   const treatedData = {
     name: data[0].data.userInfos.firstName,
