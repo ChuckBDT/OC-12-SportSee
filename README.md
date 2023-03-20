@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Important
 
-To use this projet you need the following API **running under port 3456** : [P9 FrontEnd Dashboard](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard) or you can run it using the mocked data by modifying the parameter of _src/views/Home.js:25_ from false to true.
+To use this projet you need the following API **running under port 3456** : [P9 FrontEnd Dashboard](https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard) or you can run it using the mocked data by modifying the parameter of _src/views/Home.js:21_ from false to true.
 
 ## Start
 
