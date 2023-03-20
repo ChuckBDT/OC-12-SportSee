@@ -15,7 +15,7 @@ function Home() {
 
   useEffect(() => {
     const getData = async () => {
-      const data = await service(id, true);
+      const data = await service(id, false);
       setData(data);
     };
     getData();
