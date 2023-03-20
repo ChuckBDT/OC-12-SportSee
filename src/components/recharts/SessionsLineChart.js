@@ -8,59 +8,59 @@ import {
   YAxis,
 } from "recharts";
 
+// Customized to show Tooltip only if a label is provided
+// See comment on /src/service/modelling/parts/sessionsLineChart.js
 const CustomTooltip = ({ active, payload, label }) => {
-  // Thanks to https://stackoverflow.com/a/72964329
-  // Customized to show Tooltip only if a label is provided
-  // See comment on /src/service/modelling/parts/sessionsLineChart.js
-
   if (active && payload && payload.length && label) {
     return (
-      <div className="h-8 w-14 bg-white flex justify-center items-center">
-        <p className="text-black font-medium text-xs">{`${payload[0].value} min`}</p>
+      <div className='h-8 w-14 bg-white flex justify-center items-center'>
+        <p className='text-black font-medium text-xs'>{`${payload[0].value} min`}</p>
       </div>
     );
   }
   return null;
 };
 
+// SessionsLineChart component : Returns a line chart with a line
+// depending of session's durations and session's day
 function SessionsLineChart({ data }) {
   return (
     <ResponsiveContainer height={260}>
       <LineChart
-        className="rounded-md bg-red"
+        className='rounded-md bg-red'
         data={data}
         margin={{
           bottom: 15,
         }}
       >
         <text
-          className="font-medium"
+          className='font-medium'
           y={40}
           x={25}
-          fill="white"
+          fill='white'
           fillOpacity={0.5}
         >
           Durée moyenne
         </text>
         <text
-          className="font-medium"
+          className='font-medium'
           y={65}
           x={25}
-          fill="white"
+          fill='white'
           fillOpacity={0.5}
         >
           des sessions
         </text>
 
         <XAxis
-          dataKey="day"
+          dataKey='day'
           tick={{ fill: "white" }}
           opacity={0.5}
           axisLine={false}
           tickLine={false}
         />
 
-        <YAxis padding={{ top: 80 }} orientation="right" hide={true} />
+        <YAxis padding={{ top: 80 }} orientation='right' hide={true} />
 
         <Tooltip
           content={<CustomTooltip />}
@@ -69,11 +69,11 @@ function SessionsLineChart({ data }) {
         />
 
         <Line
-          type="basis"
-          dataKey="sessionLength"
-          stroke="white"
+          type='basis'
+          dataKey='sessionLength'
+          stroke='white'
           strokeOpacity={0.5}
-          strokeWidth="0.15rem"
+          strokeWidth='0.15rem'
           dot={false}
           activeDot={{
             r: 4,

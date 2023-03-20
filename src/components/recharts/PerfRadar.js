@@ -7,22 +7,23 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
+// PerfRadar component : Returns a RadarChart component
 export default function PerfRadar({ data }) {
   return (
     <ResponsiveContainer height={260}>
       <RadarChart
-        className="bg-grayDark rounded-md justify-self-center"
+        className='bg-grayDark rounded-md justify-self-center'
         outerRadius={80}
         data={data}
         startAngle={-150}
         endAngle={210}
       >
-        <PolarGrid stroke="#FFFFFF" />
+        <PolarGrid stroke='#FFFFFF' />
         <PolarAngleAxis
-          dataKey="kind"
+          dataKey='kind'
           tick={{ fill: "white", fontSize: "12px", fontWeight: "500" }}
         />
-        <Radar dataKey="value" fill="#FF0101" fillOpacity={0.7} />
+        <Radar dataKey='value' fill='#FF0101' fillOpacity={0.7} />
       </RadarChart>
     </ResponsiveContainer>
   );

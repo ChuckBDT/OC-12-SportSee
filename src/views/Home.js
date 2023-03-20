@@ -9,13 +9,16 @@ import SideStats from "../components/SideStats";
 import ScoreRadial from "../components/recharts/ScoreRadial";
 import SessionsLineChart from "../components/recharts/SessionsLineChart";
 
+// Home component : Home page of the websites, displays all the charts
+// and user's stats.
+
 function Home() {
   const [data, setData] = useState(null);
   const { id } = useParams();
 
   useEffect(() => {
     const getData = async () => {
-      const data = await service(id, false);
+      const data = await service(id, true);
       setData(data);
     };
     getData();
