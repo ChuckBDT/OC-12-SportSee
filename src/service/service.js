@@ -20,10 +20,10 @@ export default async function fetchUsersData(id, mocked) {
   if (mocked) {
     [userRes, activityRes, averageSessionsRes, performanceRes] =
       await Promise.all([
-        fetch(`./mockedData/${id}-id.json`),
-        fetch(`./mockedData/${id}-activity.json`),
-        fetch(`./mockedData/${id}-average-sessions.json`),
-        fetch(`./mockedData/${id}-performance.json`),
+        fetch(`/mockedData/${id}-id.json`),
+        fetch(`/mockedData/${id}-activity.json`),
+        fetch(`/mockedData/${id}-average-sessions.json`),
+        fetch(`/mockedData/${id}-performance.json`),
       ]);
   } else {
     [userRes, activityRes, averageSessionsRes, performanceRes] =
