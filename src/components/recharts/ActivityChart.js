@@ -9,6 +9,8 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
+import PropTypes from "prop-types";
+
 import { colors } from "../../assets/colors";
 
 const CustomTooltip = ({ active, payload }) => {
@@ -93,3 +95,13 @@ export default function ActivityChart({ data }) {
     </div>
   );
 }
+
+ActivityChart.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      day: PropTypes.number.isRequired,
+      kilogram: PropTypes.number.isRequired,
+      calories: PropTypes.number.isRequired,
+    })
+  ).isRequired,
+};

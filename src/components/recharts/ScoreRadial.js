@@ -7,6 +7,8 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
+import PropTypes from "prop-types";
+
 import { colors } from "../../assets/colors";
 
 // Score component : Returns a radial chart of the user's score
@@ -57,5 +59,13 @@ function ScoreRadial({ data }) {
     </ResponsiveContainer>
   );
 }
+
+ScoreRadial.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      score: PropTypes.number.isRequired,
+    })
+  ).isRequired,
+};
 
 export default ScoreRadial;

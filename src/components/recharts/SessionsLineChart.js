@@ -8,6 +8,8 @@ import {
   YAxis,
 } from "recharts";
 
+import PropTypes from "prop-types";
+
 // Customized to show Tooltip only if a label is provided
 // See comment on /src/service/modelling/parts/sessionsLineChart.js
 const CustomTooltip = ({ active, payload, label }) => {
@@ -86,5 +88,14 @@ function SessionsLineChart({ data }) {
     </ResponsiveContainer>
   );
 }
+
+SessionsLineChart.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      day: PropTypes.number,
+      sessionLength: PropTypes.number.isRequired,
+    })
+  ).isRequired,
+};
 
 export default SessionsLineChart;

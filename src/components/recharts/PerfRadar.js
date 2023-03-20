@@ -7,6 +7,8 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
+import PropTypes from "prop-types";
+
 // PerfRadar component : Returns a RadarChart component
 export default function PerfRadar({ data }) {
   return (
@@ -28,3 +30,12 @@ export default function PerfRadar({ data }) {
     </ResponsiveContainer>
   );
 }
+
+PerfRadar.propTypes = {
+  data: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.number.isRequired,
+      kind: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+};

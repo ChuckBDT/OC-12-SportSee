@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 // Side stats component : Displays the user's stats
 // about calories, protein, carbs & lipids
@@ -106,5 +107,14 @@ function SideStats({ data }) {
     </div>
   );
 }
+
+SideStats.propTypes = {
+  data: PropTypes.shape({
+    calorieCount: PropTypes.string.isRequired,
+    carbohydrateCount: PropTypes.number.isRequired,
+    lipidCount: PropTypes.number.isRequired,
+    proteinCount: PropTypes.number.isRequired,
+  }).isRequired,
+};
 
 export default SideStats;
