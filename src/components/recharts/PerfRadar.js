@@ -9,7 +9,13 @@ import {
 
 import PropTypes from "prop-types";
 
-// PerfRadar component : Returns a RadarChart component
+/**
+ * PerfRadar component : Returns a RadarChart component
+ *
+ * @component
+ * @param {Array} data
+ */
+
 export default function PerfRadar({ data }) {
   return (
     <ResponsiveContainer height={260}>

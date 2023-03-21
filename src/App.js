@@ -11,8 +11,12 @@ import {
 
 import logo from "./assets/logo.svg";
 
-// Root function : load the frame with navs & logo.
-// Depending on the route, the page content will be rendered inside.
+/**
+ * Root function : load the frame with navs & logo.
+ * Depending on the route, the page content will be rendered inside.
+ *
+ * @component
+ */
 
 function Root() {
   return (

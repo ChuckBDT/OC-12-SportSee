@@ -1,15 +1,20 @@
-// This function is related to the way that
-// recharts show the LineChart component.
-// To make a line on each edge of the chart,
-// recharts show the first and last data also
-// on the edges of the chart.
-// Considering this, it's impossible to make
-// a proper result that matches the mockup.
-
-// So, with the two functions inside sessionsLineChart,
-// a fake first and last data are provided based on the
-// existing data. Those fake data have no "day" key
-// to avoid the Tooltip showing up.
+/**
+ * This function is related to the way that
+ * recharts show the LineChart component.
+ * To make a line on each edge of the chart,
+ * recharts show the first and last data also
+ * on the edges of the chart.
+ * Considering this, it's impossible to make
+ * a proper result that matches the mockup.
+ *
+ * So, with the two functions inside sessionsLineChart,
+ * a fake first and last data are provided based on the
+ * existing data. Those fake data have no "day" key
+ * to avoid the Tooltip showing up.
+ *
+ * @param {Array} data
+ * @returns {Array}
+ */
 
 export default function sessionsLineChart(data) {
   function calculateFirstFake() {

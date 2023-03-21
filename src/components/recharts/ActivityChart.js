@@ -26,8 +26,14 @@ const CustomTooltip = ({ active, payload }) => {
   return null;
 };
 
-// Activity chart component : Displays a bar chart with
-// activity data (weight, burned calories) depending on the day
+/**
+ * Activity chart component : Displays a bar chart with
+ * activity data (weight, burned calories) depending on the day
+ *
+ * @component
+ * @param {Array} data
+ */
+
 export default function ActivityChart({ data }) {
   return (
     <div className=' h-80 bg-grayLight rounded-md flex flex-col justify-center items-end'>

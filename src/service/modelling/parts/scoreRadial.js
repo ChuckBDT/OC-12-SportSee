@@ -1,4 +1,8 @@
-// Transform the score from 0,XX to XX
+/**
+ * Transform the score from 0,XX to XX
+ * @param {{}} data
+ * @returns {Array}
+ */
 
 export default function scoreRadial(data) {
   const treatedData = [];

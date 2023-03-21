@@ -9,8 +9,12 @@ import SideStats from "../components/SideStats";
 import ScoreRadial from "../components/recharts/ScoreRadial";
 import SessionsLineChart from "../components/recharts/SessionsLineChart";
 
-// Home component : Home page of the websites, displays all the charts
-// and user's stats.
+/**
+ * Home component : Home page of the websites, displays all the charts
+ * and user's stats.
+ *
+ * @component
+ */
 
 function Home() {
   const [data, setData] = useState(null);

@@ -11,7 +11,12 @@ import PropTypes from "prop-types";
 
 import { colors } from "../../assets/colors";
 
-// Score component : Returns a radial chart of the user's score
+/**
+ * Score component : Returns a radial chart of the user's score
+ * @component
+ * @param {Array} data
+ */
+
 function ScoreRadial({ data }) {
   return (
     <ResponsiveContainer height={260}>

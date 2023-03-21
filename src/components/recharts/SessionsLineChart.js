@@ -10,9 +10,18 @@ import {
 
 import PropTypes from "prop-types";
 
-// Customized to show Tooltip only if a label is provided
-// See comment on /src/service/modelling/parts/sessionsLineChart.js
+/**
+ * Customized to show Tooltip only if a label is provided
+ * See comment on /src/service/modelling/parts/sessionsLineChart.js
+ *
+ * @param {boolean} active
+ * @param {Array} payload
+ * @param {number} label
+ * @returns {JSX.Element}
+ */
+
 const CustomTooltip = ({ active, payload, label }) => {
+  console.log(active, payload, label);
   if (active && payload && payload.length && label) {
     return (
       <div className='h-8 w-14 bg-white flex justify-center items-center'>
@@ -23,8 +32,13 @@ const CustomTooltip = ({ active, payload, label }) => {
   return null;
 };
 
-// SessionsLineChart component : Returns a line chart with a line
-// depending of session's durations and session's day
+/**
+ * SessionsLineChart component : Returns a line chart with a line
+ * depending of session's durations and session's day
+ * @component
+ * @param {Array} data
+ */
+
 function SessionsLineChart({ data }) {
   return (
     <ResponsiveContainer height={260}>

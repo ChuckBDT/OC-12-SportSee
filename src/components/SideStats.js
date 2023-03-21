@@ -1,8 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-// Side stats component : Displays the user's stats
-// about calories, protein, carbs & lipids
+/**
+ * Side stats component : Displays the user's stats
+ * about calories, protein, carbs & lipids
+ *
+ * @component
+ * @param {{}} data
+ */
+
 function SideStats({ data }) {
   return (
     <div className='flex xl:flex-col justify-between items-center w-full xl:w-3/12 '>
