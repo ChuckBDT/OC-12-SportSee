@@ -21,7 +21,6 @@ import PropTypes from "prop-types";
  */
 
 const CustomTooltip = ({ active, payload, label }) => {
-  console.log(active, payload, label);
   if (active && payload && payload.length && label) {
     return (
       <div className='h-8 w-14 bg-white flex justify-center items-center'>
